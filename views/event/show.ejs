@@ -1,0 +1,26 @@
+<%- include('../partials/header.ejs') -%>
+<%- include('../partials/navbar.ejs') -%>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card mt-5">
+        <div class="card-body">
+          <h5 class="card-title"><%= event.title %></h5>
+          <hr/>
+          <p class="card-text"><%= event.description %></p>
+          <p class="card-text"><%= event.location %></p>
+          <p>
+          <span class="badge badge-secondary bg-dark">
+            <%= event.date.toLocaleDateString() %>
+          </span>
+        </p>
+          <a href="<%= '/events/edit/' + event.id  %>" class="btn btn-primary">Edit</a>
+          <a href="<%= '/events/delete/' + event.id  %>" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('../partials/footer.ejs') -%>
