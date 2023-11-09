@@ -14,7 +14,7 @@ const {
   getEditEventForm,
 } = require('../controllers/event-controller')
 
-//get all events
+//get all events paginated
 router.get('/', getAllEvents)
 
 //create event

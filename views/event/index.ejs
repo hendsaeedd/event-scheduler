@@ -19,6 +19,11 @@
     </div>
   <% }) %>
   </div>
+
+<a href="/events?page=<%= page - 1 %>&limit=<%= limit %>">Previous</a>
+
+<a href="/events?page=<%= page + 1 %>&limit=<%= limit %>">Next</a>
+
 </div>
 
 <%- include('../partials/footer.ejs') -%>
